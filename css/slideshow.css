@@ -1,0 +1,115 @@
+* {margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden;}
+/* 슬라이드 쇼 스타일 */
+
+#slideshow { width: 100%; height: 900px; }
+
+.slide_wrap { width: 100%; height: 100%; overflow: hidden;}
+
+/* 슬라이드 */
+
+.slide { width: 100%; height: 100%; background-repeat: no-repeat;
+background-position: center center; background-size: cover; 
+position: absolute; 
+top:0; left:0; }
+
+.slide_wrap .slide:nth-child(1) { background-image:url(../img/g_slide1.jpg); left:0; }
+.slide_wrap .slide:nth-child(2) { background-image:url(../img/g_slide2.jpg); left:100%; }
+.slide_wrap .slide:nth-child(3) { background-image:url(../img/g_slide3.jpg); left:100%; }
+.slide_wrap .slide:nth-child(4) { background-image:url(../img/g_slide4.jpg); left:100%; }
+
+/* 슬라이드 인덱스 */
+
+.slide_index {
+   width: 200px; height: 30px;
+   display: flex; justify-content: center; align-items: center;
+   position: absolute;
+   bottom:36px; left:calc(50% - 100px); z-index: 100;
+   list-style: none;
+}
+.slide_index_bt { width: 20px; height: 20px; margin: 4px 4px; display: flex; justify-content: center; align-items: center; cursor: pointer; } 
+
+.slide_index_bt span {  
+   width: 8px; height:8px; background: rgba(255,255,255,0.4);
+   border-radius: 4px;
+   display: block;
+}
+.slide_index .slide_index_bt:first-child span { width: 12px; height: 12px; border: 2px solid white; background: none;
+border-radius: 6px; }
+
+/* 오토 플레이 버튼 */
+
+.play_bt { margin: 4px 8px; cursor: pointer;}
+.play_bt img { width: 12px; height: 12px; }
+
+/* 좌우 무브 버튼 */
+
+#next_bt { width: 45px; height: 60px; display: flex; justify-content: center; align-items: center;
+position: absolute;
+top:calc(50% - 30px); right:40px;
+z-index: 101;
+cursor: pointer;}
+
+#prev_bt { width: 45px; height: 60px; display: flex; justify-content: center; align-items: center;
+   position: absolute;
+   top:calc(50% - 30px); left:40px;
+z-index: 102; 
+cursor: pointer;}
+   
+@keyframes fade_in_rtl {
+   0% { left:100%}
+   100% { left:0}
+}
+
+@keyframes fade_out_rtl {
+   0% { left:0}
+   100% { left:-100%}
+}
+
+@keyframes fade_out_rtl_0 {
+   0% { left:0}
+   100% { left:-100%}
+}
+
+@keyframes fade_out_rtl_1 {
+   0% { left:50%}
+   100% { left:-100%}
+}
+
+@keyframes fade_out_rtl_2 {
+   0% { left:75%}
+   100% { left:-100%}
+}
+
+
+@keyframes fade_out_rtl {
+   0% { left:0}
+   100% { left:-100%}
+}
+
+@keyframes fade_in_ltr {
+   0% { left:-100%}
+   100% { left:0}
+}
+
+@keyframes fade_out_ltr {
+   0% { left:0}
+   100% { left:100%}
+}
+
+@keyframes fade_out_ltr_0 {
+   0% { left:0}
+   100% { left:100%}
+}
+
+@keyframes fade_out_ltr_1{
+   0% { left:-25%}
+   100% { left:100%}
+}
+
+@keyframes fade_out_ltr_2 {
+   0% { left:-50%}
+   100% { left:100%}
+}
+
+
